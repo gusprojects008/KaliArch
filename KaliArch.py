@@ -40,7 +40,7 @@ def setup_logging():
 SCRIPT_DIR = Path(__file__).resolve().parent
 THEMES_DIR = SCRIPT_DIR / "themes"
 PACKAGES_JSON = THEMES_DIR / "packages.json"
-KALITHEME_PACKAGES_TXT = SCRIPT_DIR / "kalitheme_packages.txt"
+KALITHEME_PACKAGES_TXT = SCRIPT_DIR / "kalitheme-packages.txt"
 SUPPORTED_WALLPAPERS = ["kalitheme"]
 KALITHEME_WALLPAPERS_DIR = THEMES_DIR / "kalitheme" / "wallpapers"
 
@@ -256,7 +256,7 @@ def dynamic_background(sec: int, mode: str, wallpapers_path_str: str, wallpapers
             logging.error("Could not install feh. Aborting.")
             sys.exit(1)
     
-    wallpapers_path = expand_path(Path(wallpapers_path_str))
+    wallpapers_path = expand_path(Path(wallpapers_path_str)) / wallpapers_type / "wallpapers"
     
     if wallpapers_type not in SUPPORTED_WALLPAPERS:
         logging.error(f"Wallpaper type not supported. Supported: {SUPPORTED_WALLPAPERS}")
