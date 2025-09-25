@@ -188,8 +188,8 @@ def load_json_packages(json_path: Path) -> dict:
     try:
         with open(json_path, "r", encoding="utf-8") as file:
             return json.load(file)
-    except Exception as e:
-        logging.critical(f"Failed to load {json_path}: {e}")
+    except Exception as error:
+        logging.critical(f"Failed to load {json_path}: {error}")
         sys.exit(1)
 
 def InstallKalitheme():
@@ -235,7 +235,8 @@ def UninstallKalitheme():
             if path.strip():
                 restore_from_backup(Path(path.strip()))
 
-    packages_to_check = [pkg for pkg in system_packages if "bash" not in pkg]
+    CRITICAL_KEYWORDS = ("bash", "i3", "python")
+    packages_to_check = [pkg for pkg in system_packages if CRITICAL_KEYWORDS not in pkg]
     packages_to_uninstall = installed_packages_check(packages_to_check)
     
     if packages_to_uninstall:

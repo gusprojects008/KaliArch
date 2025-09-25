@@ -23,7 +23,7 @@
 - Antes de qualquer modificação, os arquivos ou diretórios de configuração são **copiados** com a extensão `.old` para garantir a segurança.
 
 ⚠️ **Importante:**
-- É sempre recomendável executar apenas como um usuário normal; o próprio script solicitará a senha *sudo*, se necessário.
+- É sempre recomendável executar apenas como um usuário normal; o próprio script solicitará a senha *sudo*, se necessário. Reiniciar a máquina após a instalação de um tema específico.
 - Após aplicar o tema, é recomendável revisar e, se necessário, personalizar os arquivos de configuração adicionados.
 - Os arquivos `.old` permitem restaurar a configuração original a qualquer momento.
 
