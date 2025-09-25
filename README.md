@@ -32,26 +32,23 @@
 ## Usage Instructions
 
 ```bash
-# Install module to colorize script messages
-pip install -r requirements.txt
-
 # Install packages listed in a file
-python3 KaliArch.py ​​--install-utilities <e.g.: pacman> utilities.txt
+python3 KaliArch.py install-utilities utilities.txt
 
 # Uninstall packages listed in a file
-python3 KaliArch.py ​​--uninstall-utilities <e.g.: pacman> utilities.txt
+python3 KaliArch.py uninstall-utilities utilities.txt
 
 # Apply the Kali-like theme
-python3 KaliArch.py ​​--install-kalitheme <e.g.: pacman>
+python3 KaliArch.py install-kalitheme
 
 # Apply the Kali-like theme with dynamic wallpaper
-python3 KaliArch.py ​​--dynamic-background 5 --randomize ~/wallpapers/ <e.g.: kalitheme>
+python3 KaliArch.py dynamic-background 5 randomize ~ kalitheme
 
 # You can also use the default order instead of random
-python3 KaliArch.py ​​--dynamic-background 5 --ordered ~/wallpapers/ <e.g.: kalitheme>
+python3 KaliArch.py dynamic-background 5 ordered ~ kalitheme
 
 # Remove the Kali-like theme and restore backups
-python3 KaliArch.py ​​--uninstall-kalitheme <e.g.: pacman>
+python3 KaliArch.py uninstall-kalitheme
 ```
 ---
 

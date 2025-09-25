@@ -32,36 +32,33 @@
 ## Instruções de Uso
 
 ```bash
-# Instalar módulo para colorir mensagens de script
-pip install -r requirements.txt
+# Instalar os pacotes listados em um arquivo
+python3 KaliArch.py ​​install-utilities utilities.txt
 
-# Instalar pacotes listados em um arquivo
-python3 KaliArch.py ​​​​--install-utilities <ex.: pacman> utilities.txt
-
-# Desinstalar pacotes listados em um arquivo
-python3 KaliArch.py ​​​​--uninstall-utilities <ex.: pacman> utilities.txt
+# Desinstalar os pacotes listados em um arquivo
+python3 KaliArch.py ​​uninstall-utilities utilities.txt
 
 # Aplicar o tema semelhante ao Kali
-python3 KaliArch.py ​​​​--install-kalitheme <ex.: pacman>
+python3 KaliArch.py ​​install-kalitheme
 
 # Aplicar o tema semelhante ao Kali com papel de parede dinâmico
-python3 KaliArch.py ​​​​--dynamic-background 5 --randomize ~/wallpapers/ <ex.: kalitheme>
+python3 KaliArch.py ​​dynamic-background 5 randomize ~ kalitheme
 
-# Você também pode usar a ordem padrão em vez de aleatória
-python3 KaliArch.py ​​​​--dynamic-background 5 --ordered ~/wallpapers/ <ex.: kalitheme>
+# Você também pode usar a ordem padrão em vez de random
+python3 KaliArch.py ​​dynamic-background 5 ordered ~ kalitheme
 
 # Remover o tema semelhante ao Kali e restaurar os backups
-python3 KaliArch.py ​​​​--uninstall-kalitheme <ex.: pacman>
+python3 KaliArch.py ​​uninstall-kalitheme
 ```
 ---
 
 ## Recomendações
 - Executar em máquinas virtuais durante ou após a instalação.
-- Personalizar o *packages.json* de *themes* ou o script, se necessário, mas seguir os padrões de script e packages.json.
-- Personalizar `~/.config/i3/config` de acordo com suas preferências após aplicar o tema.
-- Configurar a cor, o tema ou a transparência do terminal, se necessário.
-- Ajustar as fontes do **Kitty**, se necessário.
-- Definir o **Zsh** como o shell padrão.
+- Personalize o *packages.json* dos *temas* ou o script, se necessário, mas tenha cuidado para seguir os padrões de script e packages.json.
+- Personalize `~/.config/i3/config` de acordo com suas preferências após aplicar o tema.
+- Configure a cor, o tema ou a transparência do terminal, se necessário.
+- Ajuste as fontes do **Kitty**, se necessário.
+- Defina o **Zsh** como o shell padrão.
 
 ---
 
