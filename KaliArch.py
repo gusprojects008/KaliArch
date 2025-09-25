@@ -236,7 +236,7 @@ def UninstallKalitheme():
                 restore_from_backup(Path(path.strip()))
 
     CRITICAL_KEYWORDS = ("bash", "i3", "python")
-    packages_to_check = [pkg for pkg in system_packages if CRITICAL_KEYWORDS not in pkg]
+    packages_to_check = [pkg for pkg in system_packages if not any(keyword in pkg for keyword in CRITICAL_KEYWORDS)]
     packages_to_uninstall = installed_packages_check(packages_to_check)
     
     if packages_to_uninstall:
